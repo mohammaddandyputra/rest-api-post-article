@@ -22,4 +22,8 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/post/{id}', 'show');
     Route::post('/post/{id}', 'update');
     Route::delete('/post/{id}', 'destroy');
+    Route::get('/post/publish/{limit}/{offset}', 'dataPublish');
+    Route::get('/post/filter/{status}/{limit}/{offset}', 'filter');
+    Route::post('/post/trash/{id}', 'trash');
+    Route::get('/post', 'countStatus');
 });
