@@ -30,8 +30,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            // 'title' => 'required|min:20',
-            // 'content' => 'required|min:200',
+            'title' => 'required|min:20',
+            'content' => 'required|min:200',
             'category' => 'required|min:3',
             'status' => 'required|in:Publish,Draft,Trash',
         ]);
@@ -68,8 +68,8 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            // 'title' => 'required|min:20',
-            // 'content' => 'required|min:200',
+            'title' => 'required|min:20',
+            'content' => 'required|min:200',
             'category' => 'required|min:3',
             'status' => 'required|in:Publish,Draft,Trash',
         ]);
