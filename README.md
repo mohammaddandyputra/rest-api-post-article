@@ -5,3 +5,4 @@
 3. php artisan key:generate
 4. php artisan migrate
 5. php artisan serve
+- Pada file .env, ubah DB_DATABASE menjadi DB_DATABASE=post_article
